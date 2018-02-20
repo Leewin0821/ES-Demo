@@ -1,4 +1,4 @@
-package com.tw.leewin.esdemo.model;
+package com.tw.leewin.esdemo.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

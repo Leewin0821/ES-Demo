@@ -1,6 +1,6 @@
 package com.tw.leewin.esdemo.controller;
 
-import com.tw.leewin.esdemo.model.Item;
+import com.tw.leewin.esdemo.domain.Item;
 import com.tw.leewin.esdemo.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,8 +11,12 @@ import java.util.List;
 
 @RestController
 public class ItemController {
+    private final ItemService itemService;
+
     @Autowired
-    private ItemService itemService;
+    public ItemController(ItemService itemService) {
+        this.itemService = itemService;
+    }
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public void test() {
